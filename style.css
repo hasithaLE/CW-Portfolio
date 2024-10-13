@@ -1,0 +1,26 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/* Custom styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+}
