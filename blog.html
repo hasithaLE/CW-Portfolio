@@ -1,9 +1,10 @@
+<!-- blog.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Blog Posts</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -25,30 +26,33 @@
                             <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
+                            <a class="nav-link active" href="blog.html">Blog</a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <h1 class="display-4">Contact Me</h1>
+        <h1 class="display-4">My Blog</h1>
     
-        <form action="/submit-form" method="post" class="needs-validation" novalidate>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="email">Your Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="message">Message:</label>
-                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-                </div>
+        <div class="row">
+            <div class="col-md-6">
+                <article>
+                    <h2 class="mb-3">Post Title 1</h2>
+                    <small>Posted on January 1, 2024</small>
+                    <p>This is the content of the first blog post. It's a sample post to demonstrate the structure of a blog post.</p>
+                </article>
             </div>
-            <button class="btn btn-primary" type="submit">Send Message</button>
-        </form>
+            <div class="col-md-6">
+                <article>
+                    <h2 class="mb-3">Post Title 2</h2>
+                    <small>Posted on February 15, 2024</small>
+                    <p>This is the content of the second blog post. It's another sample post showing off the blog structure.</p>
+                </article>
+            </div>
+        </div>
     </div>
 </body>
 </html>

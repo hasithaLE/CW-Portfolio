@@ -3,55 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potfolio</title>
+    <title>My Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Home Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <header class="bg-primary text-white py-3">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">My Website</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
 
-    <div class="container" class="bg-image text-center shadow-1-strong rounded text-white "
-    style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.webp');">
-        <section id="hero">
-            <div class="container text-center">
-                <h1>Welcome to My Portfolio</h1>
-                <p>I'm a passionate web developer with a focus on creating innovative solutions.</p>
-                <a href="https://www.akd.lk/" class="btn btn-primary mt-3">Explore More</a>
-            </div>
-        </section>
+            <main role="main" class="container">
+                <section id="hero" class="mt-5 mb-5">
+                    <h1 class="display-4">Welcome to My Website</h1>
+                    <p class="lead">This is a sample website created using HTML5 and Bootstrap.</p>
+                </section>
+
+                <section id="social-links" class="mt-5">
+                    <h2>Follow Me:</h2>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" target="_blank" class="text-warning"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank" class="text-info"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank" class="text-danger"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </section>
+
+                <section id="twitter-feed" class="mt-5">
+                    <h2>Latest Tweets</h2>
+                    <blockquote class="blockquote">
+                        <p>Sample tweet content...</p>
+                        <footer class="blockquote-footer">Somebody on <cite title="Source Title">Twitter</cite></footer>
+                    </blockquote>
+                    <blockquote class="blockquote mt-3">
+                        <p>Another sample tweet...</p>
+                        <footer class="blockquote-footer">Someone else on <cite title="Source Title">Twitter</cite></footer>
+                    </blockquote>
+                </section>
+            </main>
+
+            <footer class="bg-secondary text-white py-3">
+                <p>&copy; 2024 My Website. All rights reserved.</p>
+            </footer>
+        </div>
     </div>
-
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <p>&copy; 2024 Hasithe.me - All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+</div>
 
 </body>
 </html>
