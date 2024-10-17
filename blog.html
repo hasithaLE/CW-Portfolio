@@ -1,23 +1,34 @@
-<!-- blog.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Posts</title>
+    <title>My Blog</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="navbar">
-            <img src="https://image.shutterstock.com/image-vector/portfolio-word-banner-vector-illustration-260nw-1200433627.jpg" alt="Logo" class="logo">
-            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-            <a class="active" href="blog.html"><i class="fa fa-fw fa-search"></i> Blogs</a>
-            <a href="about.html"><i class="fa fa-fw fa-envelope"></i> About</a>
-            <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-        </div>
-    </div>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        <h2>Blog Post 1</h2>
+        <time datetime="2023-01-15">January 15, 2023</time>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </article>
+
+    <article>
+        <h2>Blog Post 2</h2>
+        <time datetime="2023-02-20">February 20, 2023</time>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </article>
 </body>
 </html>

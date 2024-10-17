@@ -1,53 +1,129 @@
-/* Style the navigation bar */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* space between logo and nav links */
-    width: 100%;
-    background-color: #555;
-    overflow: auto;
-    padding: 0 10px; /* Optional padding */
-  }
-  
-  /* Logo styling */
-  .logo {
-    height: 40px; /* Adjust as needed */
-  }
-  
-  /* Navbar links */
-  .navbar a {
-    padding: 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    text-align: center;
-  }
-  
-  /* Align links to the right */
-  .navbar a {
-    float: none; /* Disable floating */
-    text-align: center;
-  }
-  
-  /* Navbar links on mouse-over */
-  .navbar a:hover {
-    background-color: #000;
-  }
-  
-  /* Current/active navbar link */
-  .active {
-    background-color: #04AA6D;
-  }
-  
-  /* Add responsiveness - will display the navbar vertically on screens less than 500px */
-  @media screen and (max-width: 500px) {
-    .navbar {
+/* Global Styles */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #e74c3c;
+  --background-color: #ecf0f1;
+  --text-color: #333;
+  --hover-color: rgba(52, 152, 219, 0.2);
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+/* Typography */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+}
+
+h1, h2, h3, p {
+  margin-bottom: 1rem;
+}
+
+/* Layout */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Side Information */
+#side-info {
+  position: fixed;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 250px;
+  z-index: 100;
+}
+
+/* Blog Posts */
+article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+article h2 {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+article time {
+  color: var(--primary-color);
+  font-size: 0.9em;
+  margin-top: 1rem;
+}
+
+/* Contact Form */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
       flex-direction: column;
-    }
-  
-    .navbar a {
-      display: block;
-      text-align: left; /* Align links to the left for mobile */
-    }
+      align-items: center;
   }
-  
+
+  #side-info {
+      position: static;
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+  }
+}
