@@ -47,7 +47,7 @@ header h1{
 nav ul {
   list-style-type: none;
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
   justify-content: center;
 }
 
@@ -58,6 +58,22 @@ nav ul li {
 nav a {
   color: white;
   text-decoration: none;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 115%;
+  height: 2px;
+  background: var(--background-color);
+  color: var(--background-color);
+  transition: all 0.2s;
+  pointer-events: none;
+  opacity: 0;
+}
+
+nav a:hover::after, nav a.active::after {
+  opacity: 1;
 }
 
 /* Side Information */
@@ -76,6 +92,7 @@ nav a {
 
 #side-info ul{
   list-style-type: none;
+  padding-inline-start: 0; 
 }
 
 .hero-section {
