@@ -1,7 +1,7 @@
 /* Global Styles */
 :root {
   --primary-color: #3498db;
-  --secondary-color: #e74c3c;
+  --secondary-color: #4b4b4b;
   --background-color: #ecf0f1;
   --text-color: #333;
   --hover-color: rgba(52, 152, 219, 0.2);
@@ -133,46 +133,14 @@ nav a:hover::after, nav a.active::after {
   border-radius: 5px;
 }
 
-.blogs-section span{
+.about-me h2{
   margin-top: 3rem;
-  font-size: 45px;
-  display: flex; 
-  justify-content: center
-}
-
-.blogs {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  margin-top: 1rem;
-}
-
-.blogs .card{
-  transform: translateY(0%);
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding-right: 2rem;
-  padding-left: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  width: 30%;
-}
-
-.blogs button{
-  background-color: var(--primary-color);
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 5px;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .contact-section{
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
@@ -227,6 +195,54 @@ article time {
   margin-top: 1rem;
 }
 
+.blogs-section{
+  margin-bottom: 3rem;
+}
+
+.blogs-section span{
+  margin-top: 1rem;
+  font-size: 45px;
+  display: flex; 
+  justify-content: center
+}
+
+.blogs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blogs article{
+  transform: translateY(0%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 30%;
+}
+
+.blogs img{
+  width: 50%;
+  border-radius: 15px;
+  margin: 1rem;
+}
+
+.blogs button{
+  background-color: var(--primary-color);
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
 /* Contact Form */
 form {
   max-width: 600px;
@@ -234,6 +250,15 @@ form {
   padding: 2rem;
 }
 
+form {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form .Form-Header{
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
 label {
   display: block;
   margin-bottom: 0.5rem;
@@ -249,11 +274,14 @@ input, textarea {
 
 button[type="submit"] {
   background-color: var(--primary-color);
-  color: white;
-  padding: 0.5rem;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
 button:hover {
