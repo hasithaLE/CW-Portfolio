@@ -1,14 +1,12 @@
 /* Global Styles */
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #4b4b4b;
-  --background-color: #ecf0f1;
-  --text-color: #333;
-  --hover-color: rgba(52, 152, 219, 0.2);
+  --primary-color: #1E40AF; /* Royal Blue */
+  --secondary-color: #F59E0B; /* Amber Yellow */
+  --background-color: #E0F2FE; /* Light Blue */
+  --text-color: #1F2937; /* Dark Gray */
+  --hover-color: #FBBF24; /* Bright Yellow */
 }
-*{
-  margin: 5px;
-}
+
 body {
   font-family: "Nunito", sans-serif;
   line-height: 1.6;
@@ -18,36 +16,32 @@ body {
   background-color: var(--background-color);
 }
 
-/* Typography */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*{
+  margin: 5px;
 }
 
-h1, h2, h3, p {
-  margin-bottom: 1rem;
-}
+
 
 /* Layout */
 header {
   background-color: var(--primary-color);
   color: white;
-  padding-left: 1rem;
-  padding-top: 0.5rem;
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0.5rem;
 }
 
 header h1{
   text-align: center;
+  margin-left: 1.5rem;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
 }
 
@@ -55,25 +49,38 @@ nav ul li {
   margin-right: 1rem;
 }
 
-nav a {
+nav ul li a{
   color: white;
   text-decoration: none;
+  padding: 7px 15px;
+  border-radius: 3px;
+  font-size: 18px;
 }
 
-nav a::after {
-  content: "";
-  display: block;
-  width: 115%;
-  height: 2px;
-  background: var(--background-color);
-  color: var(--background-color);
-  transition: all 0.2s;
-  pointer-events: none;
-  opacity: 0;
+nav a:hover {
+  color: var(--text-color);
+  background: var(--hover-color);
+  transition: all 0.5s;  
 }
 
-nav a:hover::after, nav a.active::after {
-  opacity: 1;
+nav a.active {
+  color: var(--text-color);
+  background: var(--hover-color);
+  transition: all 0.5s; 
+}
+
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
 }
 
 /* Side Information */
@@ -124,7 +131,7 @@ nav a:hover::after, nav a.active::after {
 .hero-buttons button{
   background-color: var(--primary-color);
   border: none;
-  color: black;
+  color: var(--background-color);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -137,6 +144,9 @@ nav a:hover::after, nav a.active::after {
   margin-top: 3rem;
   padding-left: 6rem;
   padding-right: 6rem;
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .contact-section{
@@ -154,7 +164,7 @@ nav a:hover::after, nav a.active::after {
 .contact-section button{
   background-color: var(--primary-color);
   border: none;
-  color: black;
+  color: var(--background-color);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -177,6 +187,25 @@ footer{
   align-items: center;
 }
 
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
+/*About*/
+.Story{
+  margin: 3rem;
+}
+
+.Skills{
+  margin: 3rem;
+}
+
+.MoreStory{
+  margin: 3rem;
+}
+
+
 /* Blog Posts */
 article {
   max-width: 800px;
@@ -186,17 +215,18 @@ article {
 
 article h2 {
   font-weight: bold;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 article time {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 0.9em;
   margin-top: 1rem;
 }
 
 .blogs-section{
-  margin-bottom: 3rem;
+  margin: 3rem;
+  margin-top: 1rem;
 }
 
 .blogs-section span{
@@ -231,17 +261,6 @@ article time {
   margin: 1rem;
 }
 
-.blogs button{
-  background-color: var(--primary-color);
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 5px;
-}
 
 /* Contact Form */
 form {
@@ -284,21 +303,73 @@ button[type="submit"] {
   border-radius: 5px;
 }
 
+button{
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--background-color);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
 button:hover {
+  color: var(--text-color);
   background-color: var(--hover-color);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  nav ul {
-      flex-direction: column;
-      align-items: center;
+@media (max-width: 952px) {
+  .logo{
+    font-size: 30px;
+    padding-left: 1rem;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check{
+    display: none;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: flex;
   }
 
-  #side-info {
-      position: static;
-      width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
+  nav ul {
+    width: 100%;
+    background: var(--primary-color);
+    top: 80px;
+    gap: 0;
+    left: 0;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+  }
+
+  nav ul li {
+    display: flex;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #side-info{
+    display: none;
   }
 }
