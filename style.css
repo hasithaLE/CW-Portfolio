@@ -1,12 +1,14 @@
 /* Global Styles */
 :root {
-  --primary-color: #1E40AF; /* Royal Blue */
-  --secondary-color: #F59E0B; /* Amber Yellow */
-  --background-color: #E0F2FE; /* Light Blue */
-  --text-color: #1F2937; /* Dark Gray */
-  --hover-color: #FBBF24; /* Bright Yellow */
+  --primary-color: #1E40AF; 
+  --secondary-color: #F59E0B; 
+  --background-color: #E0F2FE; 
+  --text-color: #1F2937; 
+  --hover-color: #FBBF24; 
+  --semi-transparent: rgb(30, 64, 175, 0.5);
 }
 
+/* 01. font style added to the whole website */
 body {
   font-family: "Nunito", sans-serif;
   line-height: 1.6;
@@ -60,13 +62,13 @@ nav ul li a{
 nav a:hover {
   color: var(--text-color);
   background: var(--hover-color);
-  transition: all 0.5s;  
+  transition: all 0.5s;
 }
 
 nav a.active {
   color: var(--text-color);
   background: var(--hover-color);
-  transition: all 0.5s; 
+  transition: all 0.5s;
 }
 
 .checkbtn{
@@ -94,12 +96,11 @@ nav a.active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
   text-align: center;
-  
 }
 
 #side-info ul{
   list-style-type: none;
-  padding-inline-start: 0; 
+  padding-inline-start: 0;
 }
 
 .hero-section {
@@ -114,6 +115,11 @@ nav a.active {
   margin-left: 5rem;
   width: 400px;
   border-radius: 15px;
+}
+
+/* 01. specially changed the font */
+.hero-title {
+  font-family: "Sometype Mono", monospace !important;
 }
 
 .hero-section .hero-title{
@@ -145,7 +151,7 @@ nav a.active {
   padding-left: 6rem;
   padding-right: 6rem;
   background: linear-gradient(var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -161,8 +167,9 @@ nav a.active {
   font-size: 35px;
 }
 
+/* 02. semi-transparent button colour */
 .contact-section button{
-  background-color: var(--primary-color);
+  background-color: var(--semi-transparent);
   border: none;
   color: var(--background-color);
   padding: 15px 32px;
@@ -232,7 +239,7 @@ article time {
 .blogs-section span{
   margin-top: 1rem;
   font-size: 45px;
-  display: flex; 
+  display: flex;
   justify-content: center
 }
 
@@ -294,7 +301,7 @@ input, textarea {
 button[type="submit"] {
   background-color: var(--primary-color);
   border: none;
-  color: black;
+  color: var(--background-color);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -338,7 +345,7 @@ button:hover {
     cursor: pointer;
     display: none;
   }
-  
+
   #check{
     display: none;
   }
