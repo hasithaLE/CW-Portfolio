@@ -368,7 +368,16 @@ form input:not([type="submit"]) {
     margin-top: 0;
     padding-left: 0;
     padding-right: 0;
-}
+  }
+  .Skills{
+    margin: 0;
+  }
+  .Skills ul{
+    list-style-type: none;
+  }
+  .Skills ul li{
+    margin-bottom: 1rem;
+  }
 
   /* blog section */
   .blogs {
@@ -396,6 +405,9 @@ form input:not([type="submit"]) {
   /* Form styling */
   form {
       padding: 1rem;
+  }
+  input, textarea {
+    padding: 0;
   }
 }
 
